@@ -29,7 +29,8 @@
             android:label="@string/title_activity_log_in"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".newactivity"></activity>
+        <activity android:name=".newactivity" />
+        <activity android:name=".JAVA"></activity>
     </application>
 
 </manifest>

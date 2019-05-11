@@ -1,5 +1,6 @@
 package com.example.android.eduease;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,7 +36,7 @@ public class newactivity extends AppCompatActivity {
         switch(view.getId())
         {
             case R.id.checkbox_CSE:
-            if (checked)
+             if (checked)
             {
                 sdaa.setVisibility(View.VISIBLE);
                 scpp.setVisibility(View.VISIBLE);
@@ -54,7 +55,8 @@ public class newactivity extends AppCompatActivity {
 
 
             }
-            case R.id.checkbox_ETC:
+                break;
+                case R.id.checkbox_ETC:
                 if (checked)
                 {
                     semfw.setVisibility(View.VISIBLE);
@@ -75,6 +77,14 @@ public class newactivity extends AppCompatActivity {
 
                 }
                 break;
+               case R.id.checkbox_JAVA:
+                if (checked)
+                {
+
+                    Intent intent = new Intent(getApplicationContext(), JAVA.class);
+                    startActivity(intent);
+                }
+
 
         }
     }
