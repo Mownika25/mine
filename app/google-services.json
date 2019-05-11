@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "785447770993",
+    "firebase_url": "https://eduease-master.firebaseio.com",
+    "project_id": "eduease-master",
+    "storage_bucket": "eduease-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785447770993:android:ecb56c25e46e563b",
+        "android_client_info": {
+          "package_name": "com.example.android.eduease"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785447770993-kgtggjd77dpoia0bha4s76b8s6tdpu9b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.eduease",
+            "certificate_hash": "ae5f3308c9f4dfa769fba5a1b71fcbeb92f3372b"
+          }
+        },
+        {
+          "client_id": "785447770993-vtgphh6gu0e22ss6i4ptmd43iu9md3da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7a27DzlMAITa_gtgF7m5-u8k1e9watkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785447770993-vtgphh6gu0e22ss6i4ptmd43iu9md3da.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
