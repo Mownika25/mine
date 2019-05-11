@@ -30,11 +30,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         fbAuth = FirebaseAuth.getInstance();
 
-        if(fbAuth.getCurrentUser() != null) {
-            //Start HomeActivity
-            finish();
-            startActivity(new Intent(SignUpActivity.this, MainActivity.class));
-        }
+
 
         editID = findViewById(R.id.editID);
         editEmail = findViewById(R.id.textemailID);
