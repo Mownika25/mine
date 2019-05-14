@@ -6,11 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class STUDENT extends AppCompatActivity {
 
 
-    Button signin, login;
+    TextView login;
+    TextView signin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
