@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.eduease">
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".PROFESSOR"
-            android:label="@string/title_activity_professor"
+            android:label="Professor"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -22,15 +24,19 @@
         </activity>
         <activity
             android:name=".STUDENT"
-            android:label="@string/title_activity_student"
+            android:label="Student"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LogInActivity"
-            android:label="@string/title_activity_log_in"
+            android:label="Log in"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".newactivity" />
-        <activity android:name=".JAVA"></activity>
+        <activity android:name=".JAVA" />
+        <activity android:name=".PROFESSOR_LoginActivity" />
+        <activity android:name=".TEACHER_DASHBOARD" />
+
+
     </application>
 
 </manifest>
