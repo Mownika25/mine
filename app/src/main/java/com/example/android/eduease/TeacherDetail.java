@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
 
 public class TeacherDetail extends AppCompatActivity {
     TextView toTime,fromTime,name,cllg;
     Button ask;
-
+    private DatabaseReference sDatabaseRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +43,10 @@ public class TeacherDetail extends AppCompatActivity {
         ask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //ask to book a meeting with the professor
+
+                Toast.makeText(getApplicationContext(),"Message sent to Teacher....Don't click it again",Toast.LENGTH_SHORT).show();
+
+
             }
         });
 

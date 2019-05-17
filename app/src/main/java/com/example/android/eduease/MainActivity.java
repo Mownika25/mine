@@ -17,21 +17,21 @@ public class MainActivity extends AppCompatActivity {
         professor=findViewById(R.id.button_professor);
 
         student.setOnClickListener(new View.OnClickListener() {
-                                       @Override
-                                       public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
 
-                                           Intent intent = new Intent(getApplicationContext(), STUDENT.class);
-                                           startActivity(intent);
-                                       }
-                                   });
+                Intent intent = new Intent(getApplicationContext(), STUDENT.class);
+                startActivity(intent);
+            }
+        });
 
         professor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-    Intent intent= new Intent(getApplicationContext(),PROFESSOR_LoginActivity.class);
-    startActivity(intent);
-}
+                Intent intent= new Intent(MainActivity.this,PROFESSOR_LoginActivity.class);
+                startActivity(intent);
+            }
         });
     }
 }

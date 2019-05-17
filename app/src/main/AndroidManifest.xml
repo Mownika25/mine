@@ -11,10 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".TeacherDetail"></activity>
+        <activity android:name=".STUDENT_DASHBOARD" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ChooseSubject" />
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".STUDENT" />
+        <activity android:name=".TEACHER_DASHBOARD" />
         <activity
-            android:name=".PROFESSOR"
-            android:label="Professor"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".PROFESSOR_LoginActivity"
+            android:label="@string/title_activity_professor__login" />
+        <activity android:name=".PROFESSOR" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,22 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".STUDENT"
-            android:label="Student"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".LogInActivity"
-            android:label="Log in"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SignUpActivity" />
-
-        <activity android:name=".JAVA" />
-        <activity android:name=".PROFESSOR_LoginActivity" />
-        <activity android:name=".TEACHER_DASHBOARD" />
-        <activity android:name=".STUDENT_DASHBOARD" />
-
-        <activity android:name=".TeacherDetail"></activity>
     </application>
 
 </manifest>

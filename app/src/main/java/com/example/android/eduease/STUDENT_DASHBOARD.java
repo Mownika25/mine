@@ -102,6 +102,7 @@ public class STUDENT_DASHBOARD extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
+        Log.i("onDisabled","info");
 
     }
     @Override
@@ -131,7 +132,7 @@ public class STUDENT_DASHBOARD extends AppCompatActivity {
     @Override//just a comment for git
 
     public void onBackPressed() {
-        //sign out from app even if back is pressed
+        //sign out from app even if back is preāssed
         FirebaseAuth.getInstance().signOut();
         super.onBackPressed();
 

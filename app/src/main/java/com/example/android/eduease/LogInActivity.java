@@ -1,17 +1,11 @@
 package com.example.android.eduease;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -20,7 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -40,8 +33,8 @@ public class LogInActivity extends AppCompatActivity {
 
         fbAuth = FirebaseAuth.getInstance();
 
-        //sigin= findViewById(R.id.sign_card);
-        //login=findViewById(R.id.log_card);
+        sigin= findViewById(R.id.sign_card);
+        login=findViewById(R.id.log_card);
         editEmail = findViewById(R.id.email);
         editPass = findViewById(R.id.passkey);
         loginTx = findViewById(R.id.logIn);
@@ -50,14 +43,13 @@ public class LogInActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progress_bar_login);
         progressBar.setVisibility(View.INVISIBLE);
 
-       /* sigin.setOnClickListener(new View.OnClickListener() {
+        sigin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent homeIntent = new Intent(LogInActivity.this, SignUpActivity.class);
                 startActivity(homeIntent);
             }
         });
-        */
 
 
 
@@ -69,12 +61,12 @@ public class LogInActivity extends AppCompatActivity {
             }
         });
 
-       /* login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 userLogin();
             }
-        });*/
+        });
         loginTx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
