@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.eduease">
-    <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -31,12 +31,13 @@
             android:label="Log in"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".newactivity" />
+
         <activity android:name=".JAVA" />
         <activity android:name=".PROFESSOR_LoginActivity" />
         <activity android:name=".TEACHER_DASHBOARD" />
+        <activity android:name=".STUDENT_DASHBOARD" />
 
-
+        <activity android:name=".TeacherDetail"></activity>
     </application>
 
 </manifest>
