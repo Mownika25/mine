@@ -35,22 +35,49 @@ public class STUDENT_DASHBOARD extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student__dashboard);
 
+        Log.v("mow","error nhi hai");
         Intent intent = getIntent();
         String subj = intent.getStringExtra("subject");
 
-        database= FirebaseDatabase.getInstance();
+        database= FirebaseDatabase.getInstance();//dbpath
         myRef = database.getReference(subj);//subject
 
         listView = (ListView) findViewById(R.id.list);
+        Log.v("mow","error nhi hai2");
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
+                Log.v("mow","error nhi hai3");
 
-                collectNames((Map<String,TeacherDataUpload>) dataSnapshot.getValue());
+                //collectNames((Map<String,TeacherDataUpload>) dataSnapshot.getValue());
 
+
+
+                obj= new ArrayList<>();
+                Log.v("mow","error nhi hai600000");
+
+                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                    TeacherDataUpload value = postSnapshot.getValue(TeacherDataUpload.class);
+                    Log.v("nhhu","nhi ho rha thisssss");
+                    obj.add(new TeacherDataRetrieve(value.getName(),value.getTimeTo(),value.getTimeFRom(),value.getCllg()));
+                    // Log.e("Get Data", post.<YourMethod>());
+                }
+             //   TeacherDataRetrieve value = dataSnapshot.getValue(TeacherDataRetrieve.class);
+             /*   obj.add( new TeacherDataRetrieve( singleUser.get("name").toString(),
+                        singleUser.get("timeTo").toString(),
+                        singleUser.get("timeFRom").toString(),
+                        singleUser.get("cllg").toString()));
+*/                Log.v("mow","error nhi hai000");
+
+                objAdapter adapter = new objAdapter(getApplicationContext(), obj);
+                Log.v("mow","error nhi hai6");
+
+                listView.setAdapter(adapter);
+
+                Log.i("onDisabled","info");
             }
 
             @Override
@@ -82,11 +109,13 @@ public class STUDENT_DASHBOARD extends AppCompatActivity {
 
 
     private void collectNames(Map<String,TeacherDataUpload> users) {
+        Log.v("mow","error nhi hai4");
 
         obj= new ArrayList<>();
 
         //iterate through each user, ignoring their UID
         for (Map.Entry<String, TeacherDataUpload> entry : users.entrySet()){
+            Log.v("mow","error nhi hai5");
 
             //Get user map
             Map singleUser = (Map) entry.getValue();
@@ -99,6 +128,7 @@ public class STUDENT_DASHBOARD extends AppCompatActivity {
 
         }
         objAdapter adapter = new objAdapter(getApplicationContext(), obj);
+        Log.v("mow","error nhi hai6");
 
         listView.setAdapter(adapter);
 
@@ -122,7 +152,7 @@ public class STUDENT_DASHBOARD extends AppCompatActivity {
 
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(STUDENT_DASHBOARD.this,STUDENT.class));
+                startActivity(new Intent(STUDENT_DASHBOARD.this,MainActivity.class));
                 finish();
                 break;
         }
@@ -134,6 +164,8 @@ public class STUDENT_DASHBOARD extends AppCompatActivity {
     public void onBackPressed() {
         //sign out from app even if back is preāssed
         FirebaseAuth.getInstance().signOut();
+
+
         super.onBackPressed();
 
     }

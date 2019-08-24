@@ -106,6 +106,10 @@ public class TeacherDataUpload {
         this.c = c;
     }
 
+    public String getTimeFRom() {
+        return timeFRom;
+    }
+
     public void setAec(boolean aec) {
         this.aec = aec;
     }

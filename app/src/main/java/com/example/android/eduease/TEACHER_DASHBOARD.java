@@ -34,7 +34,7 @@ public class TEACHER_DASHBOARD extends AppCompatActivity {
 
             case R.id.logout:
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(TEACHER_DASHBOARD.this,PROFESSOR_LoginActivity.class));
+                startActivity(new Intent(TEACHER_DASHBOARD.this,MainActivity.class));
                 finish();
                 break;
         }
